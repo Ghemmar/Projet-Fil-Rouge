@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "PC Gamer",
+      "price": 1299,
+      "description": "PC haute performance",
+      "image": "https://m.media-amazon.com/images/I/81bliMy9+0L._AC_SL1500_.jpg",
+      "category": "ordinateur",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "name": "VXE R1 Pro",
+      "price": 59,
+      "description": "Souris RGB",
+      "image": "https://m.media-amazon.com/images/I/41CDl47dCAL._AC_SL1500_.jpg",
+      "category": "accessoires",
+      "stock": 20
+    }
+  ]
+}
