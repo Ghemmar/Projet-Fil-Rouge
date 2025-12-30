@@ -1,22 +1,28 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "PC Gamer",
       "price": 1299,
-      "description": "PC haute performance",
       "image": "https://m.media-amazon.com/images/I/81bliMy9+0L._AC_SL1500_.jpg",
-      "category": "ordinateur",
-      "stock": 5
+      "description": "PC haute performance"
+      
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "VXE R1 Pro",
       "price": 59,
-      "description": "Souris RGB",
       "image": "https://m.media-amazon.com/images/I/41CDl47dCAL._AC_SL1500_.jpg",
-      "category": "accessoires",
-      "stock": 20
+      "description": "Souris RGB"
+     
+     
+    },
+    {
+      "id": "3",
+      "name": "The G-Lab - Combo Hydrogen",
+      "price": 24.99,
+      "image": "https://m.media-amazon.com/images/I/51OrEd4Wd1L._AC_SX679_.jpg",
+      "description": "Pack Clavier Souris Gamer, Clavier Gamer 60% Filaire, Rétroéclairage RGB, azerty, Format Compact + Souris Gaming RGB, 6 Boutons, 6200 DPI - PC/PS4/PS5 – Blanc"
     }
   ]
 }

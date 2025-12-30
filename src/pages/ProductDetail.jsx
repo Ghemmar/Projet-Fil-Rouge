@@ -1,29 +1,44 @@
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../store/slices/cartSlice";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import api from "../api/axios";
 
 function ProductDetail() {
   const { id } = useParams();
-  const dispatch = useDispatch();
+  const [product, setProduct] = useState(null);
+  const [error, setError] = useState(false);
 
-  const product = useSelector(state =>
-    state.products.items.find(p => p.id == id)
+  useEffect(() => {
+    api
+      .get(`/products/${id}`)
+      .then(res => setProduct(res.data))
+      .catch(() => setError(true));
+  }, [id]);
+
+  if (error) return <p>Erreur produit</p>;
+  if (!product) {
+  return (
+    <div className="p-6 text-center font-semibold">
+      Chargement du produit...
+    </div>
   );
+}
 
-  if (!product) return <p>Produit introuvable</p>;
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold">{product.name}</h1>
-      <p>{product.description}</p>
-      <p className="font-bold">{product.price} €</p>
+      <Link to="/" className="underline">
+        ← Retour catalogue
+      </Link>
 
-      <button
-        onClick={() => dispatch(addToCart(product))}
-        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-      >
-        Ajouter au panier
-      </button>
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-64 my-4"
+      />
+
+      <h1 className="text-2xl font-bold">{product.name}</h1>
+      <p className="my-2">{product.description}</p>
+      <p className="font-bold">{product.price} €</p>
     </div>
   );
 }
