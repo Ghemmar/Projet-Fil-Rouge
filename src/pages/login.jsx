@@ -9,7 +9,7 @@ function Login() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    // FAKE AUTH
+    
     if (email && password) {
       localStorage.setItem("isAuth", "true");
       navigate("/admin");
@@ -17,11 +17,11 @@ function Login() {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto">
+    <div className="p-6  bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Connexion</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input
+        <input 
           type="email"
           placeholder="Email"
           value={email}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../api/axios";
+import { useSelector } from "react-redux";
+
 
 function Admin() {
   const [products, setProducts] = useState([]);
@@ -14,7 +16,18 @@ function Admin() {
   
   const [editingId, setEditingId] = useState(null);
 
-  
+  const cartItems = useSelector(state => state.cart.items);
+
+const totalItems = cartItems.reduce(
+  (sum, item) => sum + item.quantity,
+  0
+);
+
+const totalPrice = cartItems.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+);
+
   useEffect(() => {
     api.get("/products").then(res => setProducts(res.data));
   }, []);
@@ -72,7 +85,8 @@ function Admin() {
   };
 
   return (
-    <div className="p-6">
+    
+    <div className="bg-white dark:bg-gray-800">
       <button
   onClick={() => {
     localStorage.removeItem("isAuth");
@@ -87,10 +101,28 @@ function Admin() {
       <Link to="/" className="underline">
          Retour catalogue
       </Link>
+      
 
       <h1 className="text-2xl font-bold my-4">Gestion des produits</h1>
 
       {/* FORMULAIRE */}
+      <div className="grid grid-cols-3 gap-4 mb-6">
+  <div className="border p-3 rounded text-center">
+    <p className="text-gray-500">Produits</p>
+    <p className="text-xl font-bold">{products.length}</p>
+  </div>
+
+  <div className="border p-3 rounded text-center">
+    <p className="text-gray-500">Articles panier</p>
+    <p className="text-xl font-bold">{totalItems}</p>
+  </div>
+
+  <div className="border p-3 rounded text-center">
+    <p className="text-gray-500">Total panier</p>
+    <p className="text-xl font-bold">{totalPrice} €</p>
+  </div>
+</div>
+
       {editingId && (
   <button
     onClick={() => {

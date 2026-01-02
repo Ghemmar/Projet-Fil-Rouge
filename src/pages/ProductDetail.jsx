@@ -25,7 +25,7 @@ function ProductDetail() {
 
 
   return (
-    <div className="p-6">
+    <div className="p-6 bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
       <Link to="/" className="underline">
         ← Retour catalogue
       </Link>

@@ -15,8 +15,7 @@ function Catalogue() {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  // États de chargement
-  if (status === "loading") {
+if (status === "loading") {
   return (
     <div className="p-6 text-center font-semibold">
       Chargement des produits...
@@ -36,10 +35,9 @@ function Catalogue() {
     
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {items.map(product => (
-          <div
-            key={product.id}
-            className="border p-4 rounded flex flex-col gap-2"
-          >
+        <div
+          key={product.id}
+          className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded flex flex-col gap-2 transition">
           
             <Link to={`/product/${product.id}`}>
               <img
@@ -49,13 +47,13 @@ function Catalogue() {
               />
             </Link>
 
-            {/* NOM DU PRODUIT */}
+            {/* NOM DU PRODUITS */}
             <h2 className="font-bold">{product.name}</h2>
 
             {/* PRIX */}
             <p>{product.price} €</p>
 
-            {/* BOUTON PANIER */}
+            {/* BOUTON DE PANIER  */}
             <button
               onClick={() => dispatch(addToCart(product))}
               className="bg-blue-600 text-white px-4 py-2 rounded mt-2"

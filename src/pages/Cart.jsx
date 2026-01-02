@@ -13,7 +13,7 @@ function Cart() {
 
 if (items.length === 0) {
   return (
-    <div className="p-6 text-center">
+    <div className="bg-white dark:bg-gray-800 p-4 rounded">
       <p className="mb-4">Votre panier est vide </p>
       <Link to="/" className="underline">
         Retour au catalogue
@@ -24,16 +24,16 @@ if (items.length === 0) {
 
 
   return (
-    <div className="p-6">
+    <div className="p-6 border p-4 rounded bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Panier</h1>
 
 {items.map(item => (
-  <div
+  <div 
     key={item.id}
-    className="flex items-center justify-between border p-3 mb-3 rounded"
+    className="flex items-center justify-between border p-3 mb-3 rounded "
   >
     {/* IMAGE + NOM */}
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 ">
       <img
         src={item.image}
         alt={item.name}

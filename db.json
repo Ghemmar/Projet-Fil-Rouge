@@ -6,7 +6,6 @@
       "price": 1299,
       "image": "https://m.media-amazon.com/images/I/81bliMy9+0L._AC_SL1500_.jpg",
       "description": "PC haute performance"
-      
     },
     {
       "id": "2",
@@ -14,8 +13,6 @@
       "price": 59,
       "image": "https://m.media-amazon.com/images/I/41CDl47dCAL._AC_SL1500_.jpg",
       "description": "Souris RGB"
-     
-     
     },
     {
       "id": "3",
