@@ -17,10 +17,9 @@ function DarkModeToggle() {
 
   return (
     <button
-      onClick={() => setDark(prev => !prev)}
-      className="border px-3 py-1 rounded text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
-    >
-      {dark ? "☀️ Light" : "🌙 Dark"}
+      onClick={() => setDark(!dark)}
+      className="px-3 py-1 rounded border text-sm bg-white text-black dark:bg-gray-800 dark:text-white">
+      {dark ? "Light" : "Dark"}
     </button>
   );
 }

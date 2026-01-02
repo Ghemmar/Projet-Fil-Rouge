@@ -32,7 +32,7 @@ if (items.length === 0) {
     key={item.id}
     className="flex items-center justify-between border p-3 mb-3 rounded "
   >
-    {/* IMAGE + NOM */}
+   
     <div className="flex items-center gap-3 ">
       <img
         src={item.image}
@@ -43,7 +43,7 @@ if (items.length === 0) {
       <span className="font-semibold">{item.name}</span>
     </div>
 
-    {/* QUANTITÉ */}
+    
     <input
       type="number"
       min="1"
@@ -59,12 +59,12 @@ if (items.length === 0) {
       className="w-16 border p-1 text-center"
     />
 
-    {/* PRIX */}
+  
     <span className="font-bold">
       {item.price * item.quantity} €
     </span>
 
-    {/* SUPPRIMER */}
+   
     <button onClick={() => dispatch(removeFromCart(item.id))} className="text-red-600"> X </button>
   </div>
 ))}
@@ -73,13 +73,22 @@ if (items.length === 0) {
       <hr />
 
       <p className="mt-4 font-bold">Total : {total} €</p>
-
-      <button
-        onClick={() => dispatch(clearCart())}
-        className="mt-4 bg-red-600 text-white px-4 py-2 rounded"
-      >
-        Vider le panier
-      </button>
+      
+       <button onClick={() => dispatch(clearCart())}  className="
+    mt-2 px-4 py-2 rounded font-semibold
+    bg-red-600 text-black
+    hover:bg-red-500
+    active:scale-95
+    transition-all duration-200
+  ">Vider le panier</button>
+       <button   className="
+    mt-2 px-4 py-2 rounded font-semibold
+    bg-yellow-400 text-black
+    hover:bg-yellow-500
+    active:scale-95
+    transition-all duration-200
+  ">Acheter</button>
+      
     </div>
   );
 }

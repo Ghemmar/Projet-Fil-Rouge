@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
 import { useSelector } from "react-redux";
 
-function Navbar() {
+function Header() {
   const cartItems = useSelector(state => state.cart.items);
   const totalItems = cartItems.reduce(
     (sum, item) => sum + item.quantity,
@@ -16,12 +16,12 @@ function Navbar() {
       </Link>
 
       <div className="flex items-center gap-6">
-        <Link className="hover:text-yellow-400" to="/cart">
-          Panier ({totalItems})
+        <Link className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition" 
+          to="/cart">Panier ({totalItems})
         </Link>
 
-        <Link className="hover:text-yellow-400" to="/admin">
-          Admin
+        <Link className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition" 
+          to="/admin">Admin
         </Link>
 
         <DarkModeToggle />
@@ -30,4 +30,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;
