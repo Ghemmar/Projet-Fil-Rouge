@@ -3,37 +3,30 @@ import { Link } from "react-router-dom";
 import api from "../api/axios";
 import { useSelector } from "react-redux";
 
-
 function Admin() {
   const [products, setProducts] = useState([]);
 
-  
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
 
-  
   const [editingId, setEditingId] = useState(null);
 
-  const cartItems = useSelector(state => state.cart.items);
+  const cartItems = useSelector((state) => state.cart.items);
 
-const totalItems = cartItems.reduce(
-  (sum, item) => sum + item.quantity,
-  0
-);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-const totalPrice = cartItems.reduce(
-  (sum, item) => sum + item.price * item.quantity,
-  0
-);
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   useEffect(() => {
-    api.get("/products").then(res => setProducts(res.data));
+    api.get("/products").then((res) => setProducts(res.data));
   }, []);
 
- 
-  const handleEdit = product => {
+  const handleEdit = (product) => {
     setEditingId(product.id);
     setName(product.name);
     setPrice(product.price);
@@ -41,175 +34,156 @@ const totalPrice = cartItems.reduce(
     setDescription(product.description);
   };
 
-  
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const productData = {
-      name,
-      price: Number(price),
-      image,
-      description,
-    };
+    const productData = { name, price: Number(price), image, description };
 
-  
     if (editingId) {
-      api.put(`/products/${editingId}`, productData).then(res => {
-        setProducts(
-          products.map(p =>
-            p.id === editingId ? res.data : p
-          )
-        );
+      api.put(`/products/${editingId}`, productData).then((res) => {
+        setProducts(products.map((p) => (p.id === editingId ? res.data : p)));
         setEditingId(null);
       });
-    }
-    
-    else {
-      api.post("/products", productData).then(res => {
+    } else {
+      api.post("/products", productData).then((res) => {
         setProducts([...products, res.data]);
       });
     }
 
-    
     setName("");
     setPrice("");
     setImage("");
     setDescription("");
   };
 
-  
-  const handleDelete = id => {
+  const handleDelete = (id) => {
     api.delete(`/products/${id}`).then(() => {
-      setProducts(products.filter(p => p.id !== id));
+      setProducts(products.filter((p) => p.id !== id));
     });
   };
 
   return (
-    
     <div className="bg-white dark:bg-gray-800">
       <button
-  onClick={() => {
-    localStorage.removeItem("isAuth");
-    window.location.href = "/login";
-  }}
-  className="text-red-600 underline mb-4"
->
-  Se déconnecter
-</button>
-
-        <div className="max-w-md mx-auto">
-      <Link to="/" className="underline">
-         Retour catalogue
-      </Link>
-      
-
-      <h1 className="text-2xl font-bold my-4">Gestion des produits</h1>
-
-      {/* FORMULAIRE */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-  <div className="border p-3 rounded text-center">
-    <p className="text-gray-500">Produits</p>
-    <p className="text-xl font-bold">{products.length}</p>
-  </div>
-
-  <div className="border p-3 rounded text-center">
-    <p className="text-gray-500">Articles panier</p>
-    <p className="text-xl font-bold">{totalItems}</p>
-  </div>
-
-  <div className="border p-3 rounded text-center">
-    <p className="text-gray-500">Total panier</p>
-    <p className="text-xl font-bold">{totalPrice} €</p>
-  </div>
-</div>
-
-      {editingId && (
-  <button
-    onClick={() => {
-      setEditingId(null);
-      setName("");
-      setPrice("");
-      setImage("");
-      setDescription("");
-    }}
-    className="text-gray-500 underline mt-2"
-  >
-    Annuler modification
-  </button>
-)}
-
-      <form
-        onSubmit={handleSubmit}
-        className="mb-6 flex flex-col gap-2 max-w-md"
+        onClick={() => {
+          localStorage.removeItem("isAuth");
+          window.location.href = "/login";
+        }}
+        className="text-red-600 underline mb-4"
       >
-        <input
-          placeholder="Nom"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          className="border p-2"
-          required
-        />
+        Se déconnecter
+      </button>
 
-        <input
-          type="number"
-          placeholder="Prix"
-          value={price}
-          onChange={e => setPrice(e.target.value)}
-          className="border p-2"
-          required
-        />
+      <div className="max-w-md mx-auto">
+        <Link to="/" className="underline">
+          Retour catalogue
+        </Link>
 
-        <input
-          placeholder="Image URL"
-          value={image}
-          onChange={e => setImage(e.target.value)}
-          className="border p-2"
-          required
-        />
+        <h1 className="text-2xl font-bold my-4">Gestion des produits</h1>
 
-        <textarea
-          placeholder="Description"
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-          className="border p-2"
-          required
-        />
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="border p-3 rounded text-center">
+            <p className="text-gray-500">Produits</p>
+            <p className="text-xl font-bold">{products.length}</p>
+          </div>
 
-        <button className="bg-green-600 text-white p-2 rounded">
-          {editingId ? "Mettre à jour" : "Ajouter produit"}
-        </button>
-      </form>
+          <div className="border p-3 rounded text-center">
+            <p className="text-gray-500">Articles panier</p>
+            <p className="text-xl font-bold">{totalItems}</p>
+          </div>
 
-      
-      <h2 className="font-bold mb-4">Produits</h2>
-
-      {products.map(product => (
-        <div
-          key={product.id}
-          className="flex justify-between items-center border p-2 mb-2"
-        >
-          <span>
-            {product.name} — {product.price} €
-          </span>
-
-          <div className="flex gap-2">
-            <button
-              onClick={() => handleEdit(product)}
-              className="text-blue-600"
-            >
-              Modifier
-            </button>
-
-            <button
-              onClick={() => handleDelete(product.id)}
-              className="text-red-600"
-            >
-              Supprimer
-            </button>
+          <div className="border p-3 rounded text-center">
+            <p className="text-gray-500">Total panier</p>
+            <p className="text-xl font-bold">{totalPrice} €</p>
           </div>
         </div>
-      ))}
-    </div>
+
+        {editingId && (
+          <button
+            onClick={() => {
+              setEditingId(null);
+              setName("");
+              setPrice("");
+              setImage("");
+              setDescription("");
+            }}
+            className="text-gray-500 underline mt-2"
+          >
+            Annuler modification
+          </button>
+        )}
+
+        <form
+          onSubmit={handleSubmit}
+          className="mb-6 flex flex-col gap-2 max-w-md"
+        >
+          <input
+            placeholder="Nom"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border p-2"
+            required
+          />
+
+          <input
+            type="number"
+            placeholder="Prix"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="border p-2"
+            required
+          />
+
+          <input
+            placeholder="Image URL"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            className="border p-2"
+            required
+          />
+
+          <textarea
+            placeholder="Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            className="border p-2"
+            required
+          />
+
+          <button className="bg-green-600 text-white p-2 rounded">
+            {editingId ? "Mettre à jour" : "Ajouter produit"}
+          </button>
+        </form>
+
+        <h2 className="font-bold mb-4">Produits</h2>
+
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="flex justify-between items-center border p-2 mb-2"
+          >
+            <span>
+              {product.name} — {product.price} €
+            </span>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => handleEdit(product)}
+                className="text-blue-600"
+              >
+                Modifier
+              </button>
+
+              <button
+                onClick={() => handleDelete(product.id)}
+                className="text-red-600"
+              >
+                Supprimer
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

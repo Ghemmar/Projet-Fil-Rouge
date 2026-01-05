@@ -7,7 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
-
 if (localStorage.getItem("darkMode") === "true") {
   document.documentElement.classList.add("dark");
 }

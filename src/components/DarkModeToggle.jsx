@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
 function DarkModeToggle() {
-  const [dark, setDark] = useState(
-    localStorage.getItem("darkMode") === "true"
-  );
+  const [dark, setDark] = useState(localStorage.getItem("darkMode") === "true");
 
   useEffect(() => {
     if (dark) {
@@ -16,11 +14,7 @@ function DarkModeToggle() {
   }, [dark]);
 
   return (
-    <button
-      onClick={() => setDark(!dark)}
-      className="px-3 py-1 rounded border text-sm bg-white text-black dark:bg-gray-800 dark:text-white">
-      {dark ? "Light" : "Dark"}
-    </button>
+    <button onClick={() => setDark(!dark)}>{dark ? "Light" : "Dark"}</button>
   );
 }
 

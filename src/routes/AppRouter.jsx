@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Cart from "../pages/Cart";
 import Admin from "../pages/Admin";
-import Login from "../pages/Login";
+import Login from "../pages/login";
 import ProductDetails from "../pages/ProductDetail";
-import Catalogue from './../pages/Catalogue';
+import Catalogue from "./../pages/Catalogue";
 import ProtectedRoute from "../components/ProtectedRoute";
 
 function AppRouter() {

@@ -6,10 +6,9 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     if (email && password) {
       localStorage.setItem("isAuth", "true");
       navigate("/admin");
@@ -21,11 +20,11 @@ function Login() {
       <h1 className="text-2xl font-bold mb-4">Connexion</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input 
+        <input
           type="email"
           placeholder="Email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="border p-2"
           required
         />
@@ -34,7 +33,7 @@ function Login() {
           type="password"
           placeholder="Mot de passe"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           className="border p-2"
           required
         />

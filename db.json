@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "PC Gamer",
-      "price": 1299,
-      "image": "https://m.media-amazon.com/images/I/81bliMy9+0L._AC_SL1500_.jpg",
-      "description": "PC haute performance"
-    },
-    {
       "id": "2",
       "name": "VXE R1 Pro",
       "price": 59,
@@ -27,6 +20,13 @@
       "price": 100,
       "image": "https://flydigi.net/cdn/shop/files/FLYDIGIVader4ProController_3.jpg?v=1746608230",
       "description": "Multi-Platform PC Gaming Controller: FLYDIGI Vader 4 Pro supported platforms: PC/NS/TV/Android/Laptop(NOT support xbox and ps so far). Connection modes: Wired/Bluetooth/2.4G Wireless Dongle\n\nForce-Adjustable Lever Joystick: Adjust tension by rotating the force adjustment ring even when you are gaming to find the most suitable feel and most flexible customization, less than 1% drift, achieving 12-bit ultra-high resolution\n\nForce-Switchable Vibration Triggers: One Controller With two Kinds Triggers, macro trigger and hall effect linear trigger one key switch! Provide you with a smooth and precise control. Coupled with the Hall effect joysticks that never get stick drift\n\n1000 Hz Wired/Wireless Polling Rate: Which enhances the controller responsiveness and ensuring better synchronization between player reactions and game actions. Whether rapid combos or precise aiming, both smoother and more consistent gaming experience\n\nMore Competitive FLYDIGI Space Station 3.4: Which is upgraded for competitive players, offering more functions in joystick module, such as Sampling rate between 8-12 bits, polling rate between 125-1000Hz, deadzone compensation, center sensitivity, etc\n\nUpgraded four-Motors Areas Stereo Vibration: Counter-weighted handbar areas and triggers areas where brings an immersive and lasting gaming experience, giving you the most realistic game feedback, support customize the vibration strength in software"
+    },
+    {
+      "id": "e955",
+      "name": "BEASTCOM Q5 Pro Gaming",
+      "price": 1100,
+      "image": "https://www.cdiscount.com/pdt2/8/8/6/1/700x700/bea1701099010886/rw/beastcom-q5-pc-gamer-amd-ryzen-5-5500-6x-4-20gh.jpg",
+      "description": "BEASTCOM Q5 | PC de jeu Pro | AMD Ryzen 7 5700X 8X 4,60GHz 16 Threads | NVIDIA RTX 5060 Ti 8GB | 32GB RAM | 1TB NVMe SSD | WiFi 5 | Windows 11 Pro"
     }
   ]
 }
