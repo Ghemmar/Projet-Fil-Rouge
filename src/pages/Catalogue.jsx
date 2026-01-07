@@ -1,72 +1,107 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../store/slices/productsSlice";
 import { addToCart } from "../store/slices/cartSlice";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 function Catalogue() {
   const dispatch = useDispatch();
-  const [search, setSearch] = useState("");
 
   const { items, status } = useSelector((state) => state.products);
+
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
   if (status === "loading") {
-    return (
-      <div className="p-6 text-center font-semibold">
-        Chargement des produits...
-      </div>
-    );
+    return <p className="p-6 text-center">Chargement...</p>;
   }
 
-  if (status === "failed")
-    return <p className="p-6 text-center font-semibold">Erreur chargement</p>;
+  if (status === "failed") {
+    return <p className="p-6 text-center text-red-500">Erreur chargement</p>;
+  }
+
+  const filteredProducts = items.filter((product) => {
+    const matchCategory = category === "all" || product.category === category;
+
+    const matchSearch = product.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    return matchCategory && matchSearch;
+  });
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Rechercher un produit..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full mb-6 px-4 py-2 rounded bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 
-        text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 "
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {items
-          .filter((product) =>
-            product.name.toLowerCase().includes(search.toLowerCase())
-          )
-          .map((product) => (
-            <div
-              key={product.id} 
-              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded flex flex-col gap-2 transition"
-            >
-              <Link to={`/product/${product.id}`}>
-                <img
-                  src={product.image || "https://via.placeholder.com/150"}
-                  alt={product.name}
-                  className="h-40 object-cover cursor-pointer"
-                />
-              </Link>
-
-              <h2 className="font-bold">{product.name}</h2>
-              <p>{product.price} €</p>
-
-              <button
-                onClick={() => dispatch(addToCart(product))}
-                className="mt-2 px-4 py-2 rounded font-semibold bg-yellow-400 text-black hover:bg-yellow-700 active:scale-95 transition-all duration-200 cursor-pointer"
-              >
-                Ajouter au panier
-              </button>
-            </div>
-          ))}
+    <div className="p-6">
+      <div className="mb-6 flex justify-center">
+        <input
+          type="text"
+          placeholder="Rechercher un produit..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full max-w-md border px-4 py-2 rounded focus:outline-none focus:ring focus:border-blue-400"
+        />
       </div>
+      {filteredProducts.length === 0 && search.trim() !== "" && (
+        <p className="text-center text-gray-500 mt-6">
+          Aucun résultat trouvé pour «{" "}
+          <span className="font-semibold">{search}</span> ».
+        </p>
+      )}
+
+      <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+        <h1 className="text-2xl font-bold">
+          Catalogue ({filteredProducts.length})
+        </h1>
+
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="border px-4 py-2 rounded bg-white dark:bg-gray-800"
+        >
+          <option value="all">Tous</option>
+          <option value="boitier">Boîtiers</option>
+          <option value="clavier">Claviers</option>
+          <option value="souris">Souris</option>
+          <option value="ecran">Écrans</option>
+          <option value="manette">Manettes</option>
+        </select>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="border rounded p-4 flex flex-col">
+            <Link to={`/product/${product.id}`}>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="h-40 object-contain"
+              />
+            </Link>
+
+            <h2 className="font-semibold">{product.name}</h2>
+            <p className="text-sm text-gray-500 capitalize">
+              {product.category}
+            </p>
+
+            <p className="font-bold mt-2">{product.price} €</p>
+
+            <button
+              onClick={() => dispatch(addToCart(product))}
+              className="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition"
+            >
+              Ajouter au panier
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {filteredProducts.length === 0 && (
+        <p className="text-center text-gray-500 mt-6">Aucun produit trouvé</p>
+      )}
     </div>
   );
 }

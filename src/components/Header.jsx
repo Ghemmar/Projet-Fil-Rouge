@@ -13,15 +13,21 @@ function Header() {
       </Link>
 
       <div className="flex items-center gap-6">
-        <Link className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition" to="/cart">
+        <Link
+          className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition"
+          to="/cart"
+        >
           Panier ({totalItems})
         </Link>
 
-        <Link className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition" to="/admin">
+        <Link
+          className="px-3 py-1 rounded hover:text-yellow-400 hover:bg-gray-700 transition"
+          to="/admin"
+        >
           Admin
         </Link>
 
-        <DarkModeToggle />
+        <DarkModeToggle/>
       </div>
     </header>
   );

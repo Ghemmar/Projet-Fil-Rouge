@@ -10,6 +10,7 @@ function Admin() {
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
 
   const [editingId, setEditingId] = useState(null);
 
@@ -32,28 +33,40 @@ function Admin() {
     setPrice(product.price);
     setImage(product.image);
     setDescription(product.description);
+    setCategory(product.category || "");
+  };
+
+  const resetForm = () => {
+    setName("");
+    setPrice("");
+    setImage("");
+    setDescription("");
+    setCategory("");
+    setEditingId(null);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const productData = { name, price: Number(price), image, description };
+    const productData = {
+      name,
+      price: Number(price),
+      image,
+      description,
+      category,
+    };
 
     if (editingId) {
       api.put(`/products/${editingId}`, productData).then((res) => {
         setProducts(products.map((p) => (p.id === editingId ? res.data : p)));
-        setEditingId(null);
+        resetForm();
       });
     } else {
       api.post("/products", productData).then((res) => {
         setProducts([...products, res.data]);
+        resetForm();
       });
     }
-
-    setName("");
-    setPrice("");
-    setImage("");
-    setDescription("");
   };
 
   const handleDelete = (id) => {
@@ -63,7 +76,7 @@ function Admin() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800">
+    <div className="bg-white dark:bg-gray-800 min-h-screen p-6">
       <button
         onClick={() => {
           localStorage.removeItem("isAuth");
@@ -99,16 +112,7 @@ function Admin() {
         </div>
 
         {editingId && (
-          <button
-            onClick={() => {
-              setEditingId(null);
-              setName("");
-              setPrice("");
-              setImage("");
-              setDescription("");
-            }}
-            className="text-gray-500 underline mt-2"
-          >
+          <button onClick={resetForm} className="text-gray-500 underline mt-2">
             Annuler modification
           </button>
         )}
@@ -150,6 +154,13 @@ function Admin() {
             required
           />
 
+          <input
+            placeholder="Catégorie"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="border p-2"
+          />
+
           <button className="bg-green-600 text-white p-2 rounded">
             {editingId ? "Mettre à jour" : "Ajouter produit"}
           </button>
@@ -163,7 +174,7 @@ function Admin() {
             className="flex justify-between items-center border p-2 mb-2"
           >
             <span>
-              {product.name} — {product.price} €
+              {product.name} — {product.price} € — {product.category}
             </span>
 
             <div className="flex gap-2">

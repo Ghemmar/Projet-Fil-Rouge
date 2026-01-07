@@ -1,32 +1,108 @@
 {
   "products": [
     {
-      "id": "2",
-      "name": "VXE R1 Pro",
-      "price": 59,
-      "image": "https://m.media-amazon.com/images/I/41CDl47dCAL._AC_SL1500_.jpg",
-      "description": "Souris RGB"
-    },
-    {
-      "id": "3",
-      "name": "The G-Lab - Combo Hydrogen",
-      "price": 24.99,
-      "image": "https://m.media-amazon.com/images/I/51OrEd4Wd1L._AC_SX679_.jpg",
-      "description": "Pack Clavier Souris Gamer, Clavier Gamer 60% Filaire, Rétroéclairage RGB, azerty, Format Compact + Souris Gaming RGB, 6 Boutons, 6200 DPI - PC/PS4/PS5 – Blanc"
-    },
-    {
-      "id": "d364",
       "name": "FLYDIGI Vader 4 Pro",
-      "price": 100,
-      "image": "https://flydigi.net/cdn/shop/files/FLYDIGIVader4ProController_3.jpg?v=1746608230",
-      "description": "Multi-Platform PC Gaming Controller: FLYDIGI Vader 4 Pro supported platforms: PC/NS/TV/Android/Laptop(NOT support xbox and ps so far). Connection modes: Wired/Bluetooth/2.4G Wireless Dongle\n\nForce-Adjustable Lever Joystick: Adjust tension by rotating the force adjustment ring even when you are gaming to find the most suitable feel and most flexible customization, less than 1% drift, achieving 12-bit ultra-high resolution\n\nForce-Switchable Vibration Triggers: One Controller With two Kinds Triggers, macro trigger and hall effect linear trigger one key switch! Provide you with a smooth and precise control. Coupled with the Hall effect joysticks that never get stick drift\n\n1000 Hz Wired/Wireless Polling Rate: Which enhances the controller responsiveness and ensuring better synchronization between player reactions and game actions. Whether rapid combos or precise aiming, both smoother and more consistent gaming experience\n\nMore Competitive FLYDIGI Space Station 3.4: Which is upgraded for competitive players, offering more functions in joystick module, such as Sampling rate between 8-12 bits, polling rate between 125-1000Hz, deadzone compensation, center sensitivity, etc\n\nUpgraded four-Motors Areas Stereo Vibration: Counter-weighted handbar areas and triggers areas where brings an immersive and lasting gaming experience, giving you the most realistic game feedback, support customize the vibration strength in software"
+      "price": 99.99,
+      "image": "https://ssjstoredz.com/cdn/shop/files/3034a1133efe01daba919094b70c6310_1920x1920__1_-removebg-preview.png?v=1723078091",
+      "description": "- Multi-Platform PC Gaming Controller: FLYDIGI Vader 4 Pro supported platforms: PC/NS/TV/Android/Laptop(NOT support xbox and ps so far). Connection modes: Wired/Bluetooth/2.4G Wireless Dongle\n- Force-Adjustable Lever Joystick: Adjust tension by rotating the force adjustment ring even when you are gaming to find the most suitable feel and most flexible customization, less than 1% drift, achieving 12-bit ultra-high resolution\n- Force-Switchable Vibration Triggers: One Controller With two Kinds Triggers, macro trigger and hall effect linear trigger one key switch! Provide you with a smooth and precise control. Coupled with the Hall effect joysticks that never get stick drift\n- 1000 Hz Wired/Wireless Polling Rate: Which enhances the controller responsiveness and ensuring better synchronization between player reactions and game actions. Whether rapid combos or precise aiming, both smoother and more consistent gaming experience\n- More Competitive FLYDIGI Space Station 3.4: Which is upgraded for competitive players, offering more functions in joystick module, such as Sampling rate between 8-12 bits, polling rate between 125-1000Hz, deadzone compensation, center sensitivity, etc\n- Upgraded four-Motors Areas Stereo Vibration: Counter-weighted handbar areas and triggers areas where brings an immersive and lasting gaming experience, giving you the most realistic game feedback, support customize the vibration strength in software",
+      "category": "manette",
+      "id": "d364"
     },
     {
-      "id": "e955",
       "name": "BEASTCOM Q5 Pro Gaming",
       "price": 1100,
-      "image": "https://www.cdiscount.com/pdt2/8/8/6/1/700x700/bea1701099010886/rw/beastcom-q5-pc-gamer-amd-ryzen-5-5500-6x-4-20gh.jpg",
-      "description": "BEASTCOM Q5 | PC de jeu Pro | AMD Ryzen 7 5700X 8X 4,60GHz 16 Threads | NVIDIA RTX 5060 Ti 8GB | 32GB RAM | 1TB NVMe SSD | WiFi 5 | Windows 11 Pro"
+      "image": "https://www.cybertek.fr/images_produits/cybertek/configs/20260102095919_ln_transi_08_iso_vitre_cyb_1200-min.png",
+      "description": "BEASTCOM Q5 \n- PC de jeu Pro \n- AMD Ryzen 7 5700X 8X 4,60GHz 16 Threads \n- NVIDIA RTX 5060 Ti 8GB \n- 32GB RAM \n- 1TB NVMe SSD \n- WiFi 5 \n- Windows 11 Pro",
+      "category": "boitier",
+      "id": "e955"
+    },
+    {
+      "id": "8eaa",
+      "name": "PC Gamer pikaglass",
+      "price": 1799.99,
+      "image": "https://www.cybertek.fr/images_produits/cybertek/configs/20260102210418_ln_transi_spe_02_iso_vitre_cyb_1200-min.png",
+      "description": "- Découvrez le PC Gamer PIKAGLASS, la machine gaming qui allie puissance et élégance transparente.\n- Le Core i5-14600K à 5.3 GHz assure une réactivité explosive.\n- La RTX 5070 12Go délivre des graphismes époustouflants en ray tracing.\n- 32 Go de DDR5 6000 MHz pour un multitâche sans limite.\n- SSD NVMe Gen4 1To pour des chargements instantanés.\n- Design vitré sublime qui expose vos composants premium.\n- Le PIKAGLASS représente l'équilibre parfait entre performances de pointe et esthétique cristalline",
+      "category": "boitier"
+    },
+    {
+      "id": "c0bb",
+      "name": "PC Watercooling custom  Légendaire",
+      "price": 5699.99,
+      "image": "https://www.cybertek.fr/images_produits/cybertek/configs/20251230101531_abyss_iso_1200-min.png",
+      "description": "- Carte graphique : Inno3D RTX 5090 32Go \n- Processeur : AMD Ryzen 7 9800X3D\n- Mémoire : Kingston 32Go DDR5 \n- Disque SSD : Kingston 2To \n- Watercooling : custom \n- Windows : version d'essai",
+      "category": "boitier"
+    },
+    {
+      "id": "0f4b",
+      "name": "Razer Raiju V3 Pro",
+      "price": 199.99,
+      "image": "https://assets3.razerzone.com/HXCOG1wijs0LrryGdjNmrjo0ccw=/1500x1000/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh96%2Fh0e%2F9966818820126%2F251023-raiju%C2%A0v3-pro-black-1500x1000-1.jpg",
+      "description": "Connectivity\t\nRazer HyperSpeed Wireless via included dongle\nWired Connection via USB Type A to USB Type C Cable\nSystem requirement\t\nPlayStation 5 or PC (Windows® 11 64-bit or higher)\nInternet connection for app installation\nRazer Chroma Lighting\t\nNone\nMechanical Action Buttons\t\nRazer Mecha Tactile PBT Action Buttons \nMulti-Function Buttons\t\nNone\nQuick Control Panel\t\nNone\nInterchangeable Dpad\t\nNone\nInterchangeable Thumbsticks\t\nTMR analog thumbsticks\nTrigger Stops\t\n2 Hall Effect Analog triggers with Mouse Click trigger stops\nMicrophone Input\t\nYes\nAudio output\t\nYes\nBattery life\t\nAbout 36 hours\nConfiguration app\t\nYes\nArtwork customization\t\nNone\nCarry case\t\nCarrying case for controller and accessories\nDimensions (approximate)\t\nLength: 168.8 mm / 6.64 in\nWidth: 113.4 mm / 4.46 in\nHeight: 65.1 mm / 2.56 in\nWeight (approximate)\t\n258 g / 9,1 oz",
+      "category": "manette"
+    },
+    {
+      "id": "f3b7",
+      "name": "Apex Pro TKL Gen 3",
+      "price": 239.99,
+      "image": "https://images.ctfassets.net/hmm5mo4qf4mf/4JowI26eF16rzKZ2fMJpI7/30f8b3e7ee6f957b5a927f526ada0185/apex_pro_tkl_gen_3_black_img_buy_01.png__1920x1080_crop-fit_optimize_subsampling-2-3759.png?fm=webp&q=90&fit=scale&w=1200",
+      "description": "WORLD'S FASTEST KEYBOARD — Push the boundaries with cutting-edge OmniPoint 3.0 Adjustable HyperMagnetic switches and new features\nOMNIPOINT 3.0 — More than just fast, our newly redesigned Hall Effect Switch have 20x faster actuation and 11x quicker response time, with 40 levels of adjustable actuation.\nGG QUICKSET — Game-ready presets for your favorite settings; recommended actuation levels, Rapid Trigger, Protection Mode, Rapid Tap and more with just a few clicks\nREDUCED LATENCY — Rapid Trigger and Rapid Tap register keypresses faster for more responsive game play and improved aim.\nPROTECTION MODE — A SteelSeries exclusive, reduce the sensitivity of surrounding keys when the intended key is pressed, preventing accidental inputs\nOLED SMART DISPLAY — Adjust settings on the fly without ever alt-tabbing out of your game and control media\nESPORTS-READY — TKL form factor. Full-size functionality. Premium aluminum top plate. Detachable USB-C.",
+      "category": "clavier"
+    },
+    {
+      "name": "Apex Pro Mini Gen 3",
+      "price": 209.99,
+      "image": "https://images.ctfassets.net/hmm5mo4qf4mf/4NaPLI4cjylMlkGsm8J5jW/4d0783bd5f7e1b1f9cb80d09398f8e9a/apex_pro_mini_gen_3_black_img_buy_01_us.png?fm=webp&q=90&fit=scale&w=1200",
+      "description": "LE CLAVIER LE PLUS RAPIDE AU MONDE — Repoussez les limites avec les commutateurs hypermagnétiques réglables OmniPoint 3.0 de pointe et de nouvelles fonctionnalités.\n\nOMNIPOINT 3.0 — Plus qu'un simple clavier rapide, notre commutateur à effet Hall repensé offre une activation 20 fois plus rapide et un temps de réponse 11 fois plus court, avec 40 niveaux d'activation réglables.\n\nGG QUICKSET — Accédez à des préréglages prêts à l'emploi pour vos paramètres favoris : niveaux d'activation recommandés, Rapid Trigger, mode Protection, Rapid Tap et bien plus encore en quelques clics.\n\nLATENCE RÉDUITE — Rapid Trigger et Rapid Tap enregistrent les frappes plus rapidement pour une réactivité accrue et une précision améliorée.\n\nMODE PROTECTION — Exclusivité SteelSeries : réduisez la sensibilité des touches environnantes lorsque vous appuyez sur la touche souhaitée, évitant ainsi les frappes accidentelles.\n\nFORMAT MINI, PUISSANCE MAXIMALE — Format mini. Fonctionnalités complètes. Plaque supérieure en aluminium de qualité supérieure. Câble USB-C détachable.",
+      "category": "clavier",
+      "id": "eefe"
+    },
+    {
+      "name": "Aerox 5 Wireless - Blemished Box",
+      "price": 99.99,
+      "image": "https://images.ctfassets.net/hmm5mo4qf4mf/4Qv4X4AHbvxTHUBXaPlR58/ec95e67f08e379257561802e9f81dc5f/aerox_5_wl_black_pdp_buyimg_5.png__1920x1080_crop-fit_optimize_subsampling-2-905.png?fm=webp&q=90&fit=scale&w=1200",
+      "description": "ÉCLAT RVB — L'éclairage PrismSync RGB à 3 zones offre 16,8 millions de couleurs configurables.\nULTRA LÉGER — Sa coque perforée spécialement conçue réduit le poids à 74 g pour un jeu rapide et sans effort.\nAQUABARRIER™ — L'intérieur de la souris est protégé des éclaboussures d'eau, de la poussière et des saletés, une technologie certifiée IP54.\n9 BOUTONS PROGRAMMABLES — Un confort naturel grâce à des boutons entièrement personnalisables, incluant un panneau latéral et un interrupteur à bascule haut/bas\nDES PERFORMANCES À TOUTE ÉPREUVE — Profitez d'une autonomie exceptionnelle de 180 heures grâce à la technologie sans fil Quantum 2.0 sans latence, avec une fréquence de 2,4 GHz pour les jeux et une connexion Bluetooth 5.0.\nINTERRUPTEURS DE NOUVELLE GÉNÉRATION — Les interrupteurs Golden Micro IP54 offrent une durée de vie exceptionnelle pour des clics nets et précis, avec une résistance accrue à la poussière et à l'eau.",
+      "category": "souris",
+      "id": "e2ee"
+    },
+    {
+      "id": "5007",
+      "name": "Logitech G502 HERO",
+      "price": 46.99,
+      "image": "https://ssjstoredz.com/cdn/shop/products/61mpMH5TzkL._AC_SX466___1_-removebg-preview.png?v=1663264105",
+      "description": "Grâce à une mise à jour logicielle gratuite disponible sur G HUB, la souris Hero 25K bénéficie d'une amélioration remarquable : un suivi 1:1, plus de 400 ips et une sensibilité maximale de 100 à 25 600 dpi, sans lissage, filtrage ni accélération.\n\n11 boutons personnalisables et mémoire intégrée : attribuez des commandes personnalisées aux boutons et enregistrez jusqu'à cinq profils prêts à l'emploi directement sur la souris.\n\nSystème de poids ajustable : disposez jusqu'à cinq poids amovibles de 3,6 grammes à l'intérieur de la souris pour un équilibre et un poids personnalisés.\n\nÉclairage RVB programmable et technologie Lightsync : personnalisez l'éclairage parmi près de 16,8 millions de couleurs pour l'assortir aux couleurs de votre équipe, afficher votre propre style ou synchroniser les couleurs avec d'autres périphériques Logitech G.\n\nTension des boutons par interrupteur mécanique : un système de tension à ressort métallique et des charnières pivotantes sont intégrés aux boutons gauche et droit de la souris pour un clic net et précis, avec un retour haptique rapide.",
+      "category": "souris"
+    },
+    {
+      "id": "5b55",
+      "name": "AOC 27\" / 180Hz / FHD / Fast IPS / Plat - Écran PC",
+      "price": 118,
+      "image": "https://www.flowup.shop/web/image/product.product/4529/image_1920/%5B27G4XE%5D%20AOC%2027%22%20-%20180Hz%20-%20FHD%20-%20Fast%20IPS%20-%20Plat%20-%20%C3%89cran%20PC?unique=330dc4f",
+      "description": "Libérez la puissance de la série G4 avec le 27G4XE, un écran IPS de 27\" offrant des couleurs éclatantes et un contraste élevé. Profitez d'une expérience eSports fluide avec 180 Hz, 1 ms (GtG) et un faible décalage d'entrée pour des performances de jeu optimales.",
+      "category": "ecran"
+    },
+    {
+      "id": "ea19",
+      "name": "GIGABYTE 27\" / 160Hz / UHD / SS IPS / Plat - Écran PC",
+      "price": 341.83,
+      "image": "https://www.flowup.shop/web/image/product.product/6215/image_1024/%5BM27UA%5D%20GIGABYTE%2027%22%20-%20160Hz%20-%20UHD%20-%20SS%20IPS%20-%20Plat%20-%20%C3%89cran%20PC?unique=8e3ad8b",
+      "description": "Le Gigabyte M27UA est un moniteur gaming 4K de 27 pouces qui allie fluidité et précision visuelle. Doté d’une dalle Super Speed IPS, il offre une qualité d’image saisissante, avec un taux de rafraîchissement de 160 Hz et un temps de réponse de 1 ms pour une expérience de jeu ultra-fluide, même dans les scènes les plus rapides. La compatibilité DisplayHDR 400 assure des couleurs éclatantes et un contraste plus dynamique",
+      "category": "ecran"
+    },
+    {
+      "id": "deab",
+      "name": "Flydigi Direwolf 3 Wireless",
+      "price": 44.99,
+      "image": "https://ssjstoredz.com/cdn/shop/files/01.96_1_1.png?v=1736178113",
+      "description": "Force-Adjustable Lever Joystick\nEquipped with a Joystick-Dedicated Chip, Achieve Linear Control Curve, 12-bit Sampling, <1% Return to Center. With adjustable ultra-light resistance and precise centering, ranging from 40-100gf without damping adjustment, the Flydigi Direwolf 3 Gaming Controller ensures a gaming experience tailored to the user's unique style.\n\nMulti-Platform PC Gaming Controller\nSupported platforms: PC/NS/TV/Android/Laptop/xbox steam/Switch\nConnection modes: wired/bluetooth/2.4G wireless Dongle.\n\n1000Hz Polling Rate With 800mAh Battery\nThe wireless mode of the Flydigi Direwolf 3 Gaming Controller supports a 1000Hz polling rate, ensuring minimal input lag for a seamless gaming experience. Furthermore, the controller is equipped with a powerful 800mAh battery, allowing for extended gaming sessions without the hassle of frequent recharging.",
+      "category": "manette"
+    },
+    {
+      "id": "7c3d",
+      "name": "LUMINKEY Magger 68 HE",
+      "price": 120,
+      "image": "https://ssjstoredz.com/cdn/shop/files/S0a8046783f4247829529a0b846c700b6N.jpg_640x640q90__1___1_-removebg-preview.png?v=1738412652",
+      "description": "68-Key Exceptional Customization\nThe Luminkey Magger 68 HE mechanical keyboard innovative split top and bottom case structure, with its 68-key compact ANSI layout, anchored by screws, provides unparalleled stability, minimizing vibrations and extending the keyboard's lifespan. The high-quality aluminum positioning plate not only strengthens the design but also refines each keystroke's sound and feel, ensuring precision and stability in every press.\n\nEnhanced Comfort with Ultra-Low Profile Design\nThe Magger 68 HE keyboard's ultra-low front height of 16.5mm is designed with ergonomics in mind, reducing wrist strain and making it ideal for extended use. This low-profile design, combined with magnetic switch technology, provides a light and fluid typing experience, reducing fatigue during high-frequency tasks. This attention to ergonomic details allows for a more natural wrist position, ensuring comfort over prolonged periods and enhancing productivity.",
+      "category": "clavier"
     }
   ]
 }

@@ -14,7 +14,7 @@ function DarkModeToggle() {
   }, [dark]);
 
   return (
-    <button onClick={() => setDark(!dark)}>{dark ? "Light" : "Dark"}</button>
+    <button onClick={() => setDark(!dark)}>{dark ? "Light" : "Dark"} </button>
   );
 }
 
