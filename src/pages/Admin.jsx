@@ -107,7 +107,7 @@ function Admin() {
 
           <div className="border p-3 rounded text-center">
             <p className="text-gray-500">Total panier</p>
-            <p className="text-xl font-bold">{totalPrice} €</p>
+            <p className="text-xl font-bold">{totalPrice.toFixed(2)} €</p>
           </div>
         </div>
 
