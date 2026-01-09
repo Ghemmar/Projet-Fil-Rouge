@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../api/axios";
 import { useSelector } from "react-redux";
+import { Power } from 'lucide-react';
 
 function Admin() {
   const [products, setProducts] = useState([]);
@@ -82,9 +83,8 @@ function Admin() {
           localStorage.removeItem("isAuth");
           window.location.href = "/login";
         }}
-        className="text-red-600 underline mb-4"
-      >
-        Se déconnecter
+        className="text-red-600 underline mb-4">
+         <Power />
       </button>
 
       <div className="max-w-md mx-auto">

@@ -10,24 +10,25 @@ function Cart() {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
 
-  const total = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+const total = items.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+).toFixed(2);
 
-  if (items.length === 0) {
-    return (
-      <div className="bg-white dark:bg-gray-800 p-10 rounded">
-        <p className="mb-5">Votre panier est vide </p>
-        <Link
-          to="/"
-          className="mt-2 px-4 py-2 rounded font-semibold bg-yellow-400 text-black hover:bg-yellow-700 active:scale-95 transition-all duration-200 cursor-pointer"
-        >
-          Retour au catalogue
-        </Link>
-      </div>
-    );
-  }
+if (items.length === 0) {
+  return (
+    <div className="p-10 rounded min-h-screen flex flex-col items-center text-center gap-4 mt-20">
+      <p className="text-xl font-semibold">Votre panier est vide</p>
+      <Link
+        to="/"
+        className="mt-2 px-4 py-2 rounded font-semibold bg-yellow-400 text-black hover:bg-yellow-700 active:scale-95 transition-all duration-200 cursor-pointer"
+      >
+        Retour au catalogue
+      </Link>
+    </div>
+  );
+}
+
 
   return (
     <div className="p-6 border p-4 rounded bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
@@ -63,7 +64,7 @@ function Cart() {
             className="w-16 border p-1 text-center"
           />
 
-          <span className="font-bold">{item.price * item.quantity} €</span>
+          <span className="font-bold">{(item.price * item.quantity).toFixed(2)} €</span>
 
           <button
             onClick={() => dispatch(removeFromCart(item.id))}

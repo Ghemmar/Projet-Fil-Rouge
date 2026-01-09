@@ -4,6 +4,7 @@ import { fetchProducts } from "../store/slices/productsSlice";
 import { addToCart } from "../store/slices/cartSlice";
 import { Link } from "react-router-dom";
 
+
 function Catalogue() {
   const dispatch = useDispatch();
 
@@ -99,9 +100,7 @@ function Catalogue() {
         ))}
       </div>
 
-      {filteredProducts.length === 0 && (
-        <p className="text-center text-gray-500 mt-6">Aucun produit trouvé</p>
-      )}
+ 
     </div>
   );
 }
