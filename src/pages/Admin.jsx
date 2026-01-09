@@ -88,9 +88,7 @@ function Admin() {
       </button>
 
       <div className="max-w-md mx-auto">
-        <Link to="/" className="underline">
-          Retour catalogue
-        </Link>
+
 
         <h1 className="text-2xl font-bold my-4">Gestion des produits</h1>
 

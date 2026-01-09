@@ -22,7 +22,7 @@ function Catalogue() {
   }
 
   if (status === "failed") {
-    return <p className="p-6 text-center text-red-500">Erreur chargement</p>;
+    return <p className="p-6 text-center">Erreur chargement</p>;
   }
 
   const filteredProducts = items.filter((product) => {
